@@ -16,7 +16,8 @@
       "props": true,
       "ignorePropertyModificationsFor": ["state"]
     }],
-    "react/jsx-one-expression-per-line": [0]
+    "react/jsx-one-expression-per-line": [0],
+    "react/no-unescaped-entities": 0
   }
 
 }

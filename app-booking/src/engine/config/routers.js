@@ -4,9 +4,7 @@ import About from '../../ui/pages/About';
 export const links = {
   main: '/',
   about: '/about',
-  hotels: '/hotels',
 };
-
 export const pages = [
   {
     link: links.main,

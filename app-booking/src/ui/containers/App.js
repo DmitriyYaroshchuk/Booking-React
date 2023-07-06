@@ -1,8 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
 import { HistoryRouter } from 'redux-first-history/rr6';
-import { pages } from './engine/config/routers';
-import Layout from './ui/pages/Layout';
-import { history } from './engine/init/store';
+import { pages } from '../../engine/config/routers';
+import Layout from '../pages/Layout';
+import { history } from '../../engine/init/store';
+import '../../fonts/fonts.css';
 
 function App() {
   return (
@@ -17,7 +18,6 @@ function App() {
             />
           ))}
         </Route>
-
       </Routes>
     </HistoryRouter>
   );
