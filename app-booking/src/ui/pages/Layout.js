@@ -7,15 +7,24 @@ import Header from '../components/Header/Header';
 import { store } from '../../engine/init/store';
 
 const theme = createTheme({
+  palette: {
+    primary: {
+      main: blue[600],
+    },
+  },
   typography: {
     fontFamily: [
       'Roboto',
       'sans-serif',
     ].join(','),
   },
-  palette: {
-    primary: {
-      main: blue[500],
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
     },
   },
 });

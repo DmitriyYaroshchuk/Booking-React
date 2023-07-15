@@ -10,7 +10,7 @@ export const Wrapper = styled(Box)({
   marginBottom: '50px',
   backgroundColor: 'darkblue',
 });
-export const InnerWrapper = styled(Box)({
+export const InnerContainer = styled(Box)({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',

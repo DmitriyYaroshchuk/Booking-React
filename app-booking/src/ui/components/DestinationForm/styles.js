@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 
 export const Wrapper = styled(Box)({
   display: 'flex',
-  backgroundColor: '#fff',
-  margin: '30px 0',
+  backgroundColor: '#f7f7f7',
+  margin: 0,
+  borderRadius: '14px',
 });

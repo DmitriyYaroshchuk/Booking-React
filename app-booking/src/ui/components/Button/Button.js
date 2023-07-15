@@ -1,6 +1,6 @@
-import ButtonMUI from '@mui/material/Button';
 import LoadingButton from '@mui/lab/LoadingButton';
 import SaveIcon from '@mui/icons-material/Save';
+import ButtonMUI from '@mui/material/Button';
 import { LinkWrapper } from './styles';
 
 function Button(props) {
@@ -24,7 +24,7 @@ function Button(props) {
       {
                 reactHref
                   ? <LinkWrapper to={reactHref}>{children}</LinkWrapper>
-                  : { children }
+                  : children
       }
     </ButtonMUI>
   );

@@ -1,3 +1,4 @@
+import * as React from 'react';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -12,9 +13,9 @@ export default function Select(props) {
       <InputLabel id={`${input.name}-label`}>{label}</InputLabel>
       <SelectMUI
         disabled={disabled}
-        label={label}
         labelId={`${input.name}-label`}
         id={input.name}
+        label={label}
         value={input.value}
         name={input.name}
         onChange={input.onChange}
@@ -22,9 +23,9 @@ export default function Select(props) {
         onBlur={input.onBlur}
       >
         {
-              options.map((option) => (
-                <MenuItem key={option.value} value={option.value}>{option.label}</MenuItem>
-              ))
+            options.map((option) => (
+              <MenuItem key={option.value} value={option.value}>{option.label}</MenuItem>
+            ))
           }
       </SelectMUI>
     </FormControl>

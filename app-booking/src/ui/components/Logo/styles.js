@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 
 export const Wrapper = styled(Link)(({ theme }) => ({
-  fontFamily: theme.typography.fontFamily,
-  fontWeight: 700,
-  fontSize: '20px',
-  lineHeight: '210%',
   display: 'flex',
   alignItems: 'center',
   textDecoration: 'none',
