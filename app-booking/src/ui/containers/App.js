@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { HistoryRouter } from 'redux-first-history/rr6';
 import { pages } from '../../engine/config/routers';
-import Layout from '../pages/Layout';
+import Layout from './Layout/Layout';
 import { history } from '../../engine/init/store';
 import '../../fonts/fonts.css';
 

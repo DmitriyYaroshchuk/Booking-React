@@ -1,5 +1,5 @@
 import { put, call, delay } from 'redux-saga/effects';
-import { setItems, setLoading } from '../../slice';
+import { setItems, setLoading } from '../../sliceDestinations';
 import { api } from '../../../../config/axios';
 
 export default function* callGetDestinationWorker() {

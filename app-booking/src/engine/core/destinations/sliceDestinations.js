@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const slice = createSlice({
+const sliceDestinations = createSlice({
   name: 'destinations',
   initialState: {
     items: [],
@@ -15,8 +15,8 @@ const slice = createSlice({
     },
   },
 });
-export const { setItems, setLoading } = slice.actions;
-export const destinationReducer = slice.reducer;
+export const { setItems, setLoading } = sliceDestinations.actions;
+export const destinationsReducer = sliceDestinations.reducer;
 export const selectors = Object.freeze({
   items: (state) => state.destinations.items,
   loading: (state) => state.destinations.loading,

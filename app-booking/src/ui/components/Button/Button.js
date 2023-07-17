@@ -3,7 +3,7 @@ import SaveIcon from '@mui/icons-material/Save';
 import ButtonMUI from '@mui/material/Button';
 import { LinkWrapper } from './styles';
 
-function Button(props) {
+export default function Button(props) {
   const {
     children, disabled, loading, reactHref, type,
   } = props;
@@ -32,4 +32,3 @@ function Button(props) {
 Button.defaultProps = {
   type: 'button',
 };
-export default Button;

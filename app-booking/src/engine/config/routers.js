@@ -1,6 +1,6 @@
 import Main from '../../ui/pages/Main';
 import About from '../../ui/pages/About';
-import Hotels from '../../ui/pages/Hotels';
+import Hotels from '../../ui/pages/Hotels/Hotels';
 
 export const links = {
   main: '/',

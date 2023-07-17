@@ -3,7 +3,8 @@ import { createReduxHistoryContext } from 'redux-first-history';
 import { createBrowserHistory } from 'history';
 import createSagaMiddleware from 'redux-saga';
 import rootSaga from './rootSaga';
-import { destinationReducer } from '../core/destinations/slice';
+import { destinationsReducer } from '../core/destinations/sliceDestinations';
+import { hotelsReducer } from '../core/hotels/sliceHotels';
 
 const sagaMiddleware = createSagaMiddleware();
 const {
@@ -16,7 +17,8 @@ const {
 export const store = configureStore({
   reducer: {
     router: routerReducer,
-    destinations: destinationReducer,
+    destinations: destinationsReducer,
+    hotels: hotelsReducer,
   },
   middleware: () => [sagaMiddleware, routerMiddleware],
 });

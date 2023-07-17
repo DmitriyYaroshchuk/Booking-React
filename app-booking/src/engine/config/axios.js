@@ -10,7 +10,7 @@ export const api = Object.freeze({
   getDestinations(params) {
     return instance.get('destinations', { params });
   },
-  // getHotels(params) {
-  //
-  // }
+  getHotels(params) {
+    return instance.get('hotels', { params });
+  },
 });
