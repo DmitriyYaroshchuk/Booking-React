@@ -5,7 +5,7 @@ import { LinkWrapper } from './styles';
 
 export default function Button(props) {
   const {
-    children, disabled, loading, reactHref, type,
+    children, disabled, loading, reactHref, type, sx,
   } = props;
   if (loading) {
     return (
@@ -20,7 +20,7 @@ export default function Button(props) {
     );
   }
   return (
-    <ButtonMUI disabled={disabled} variant="contained" type={type}>
+    <ButtonMUI disabled={disabled} variant="contained" type={type} sx={sx}>
       {
                 reactHref
                   ? <LinkWrapper to={reactHref}>{children}</LinkWrapper>

@@ -7,14 +7,22 @@ import { Wrapper } from './styles';
 export default function SubscriptionForm(props) {
   const { handleSubmit, pristine } = props;
   return (
-    <Wrapper component="form" onSubmit={handleSubmit}>
+    <Wrapper component="form" onSubmit={handleSubmit} sx={{ alignItems: 'baseline' }}>
       <Field
         label="email"
         name="email"
         component={TextField}
         validate={composeValidators(validation.required, validation.checkEmail)}
         placeholder="Введите вашу электронную почту"
-        sx={{ maxWidth: '260px', color: '#fff' }}
+        sx={{
+          maxWidth: '260px',
+          width: '100%',
+          backgroundColor: '#fff',
+          '&:nth-of-type(3)': {
+            background: '#09214c',
+            margin: 0,
+          },
+        }}
       />
       <Button type="submit" disabled={pristine}>Подписаться</Button>
     </Wrapper>

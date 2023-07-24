@@ -1,11 +1,10 @@
 import { Grid } from '@mui/material';
 import { Field } from 'react-final-form';
 import { useSelector } from 'react-redux';
-import { Wrapper } from './styles';
+import { FormButton, Wrapper } from './styles';
 import TextField from '../TextField/TextField';
 import Select from '../Select/Select';
 import { selectors } from '../../../engine/core/destinations/sliceDestinations';
-import Button from '../Button/Button';
 import { composeValidators, validation } from './validation';
 import DatePicker from '../DatePicker/DatePicker';
 import { CustomGridContainer } from '../Logo/styles';
@@ -38,7 +37,7 @@ export default function Login(props) {
             label="Check in"
             component={DatePicker}
             disabled={pending}
-            /* validate={validation.required} */
+            validate={validation.required}
           />
         </Grid>
         <Grid item xs={2.5}>
@@ -47,7 +46,7 @@ export default function Login(props) {
             label="Check out"
             component={DatePicker}
             disabled={pending}
-            // validate={validation.required}
+            validate={validation.required}
           />
         </Grid>
         <Grid item xs={1}>
@@ -68,8 +67,15 @@ export default function Login(props) {
             validate={composeValidators(validation.required, validation.onlyNumbers)}
           />
         </Grid>
-        <Grid item>
-          <Button type="submit" loading={pending} sx={{ width: '200px', backgroundColor: '#fff' }}>Send</Button>
+        <Grid item xs={1.5}>
+          <FormButton
+            type="submit"
+            loading={pending}
+            // sx={{
+            //   maxWidth: '200px', width: '100%', backgroundColor: 'orange', height: '50px', '&:hover': { backgroundColor: '#bb7c09' },
+            // }}
+          >Send
+          </FormButton>
         </Grid>
       </CustomGridContainer>
     </Wrapper>
