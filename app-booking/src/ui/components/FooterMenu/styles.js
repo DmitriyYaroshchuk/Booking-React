@@ -20,7 +20,7 @@ export const CustomButton = styled(Button)({
   fontWeight: 400,
   fontSize: '13px',
   lineHeight: '14px',
-  padding: '0 15px',
+  padding: '12px 15px',
   backgroundColor: 'transparent',
   borderRadius: '3px',
   border: '1px solid #fff',
@@ -44,4 +44,8 @@ export const CustomLink = styled(Link)({
   textDecoration: 'underline',
   backgroundColor: 'transparent',
   borderRadius: 'unset',
+  transition: '0.3s color ease-in-out',
+  '&:hover': {
+    color: 'coral',
+  },
 });

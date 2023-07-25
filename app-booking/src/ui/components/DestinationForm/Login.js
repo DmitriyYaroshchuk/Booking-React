@@ -71,9 +71,9 @@ export default function Login(props) {
           <FormButton
             type="submit"
             loading={pending}
-            // sx={{
-            //   maxWidth: '200px', width: '100%', backgroundColor: 'orange', height: '50px', '&:hover': { backgroundColor: '#bb7c09' },
-            // }}
+            sx={{
+              maxWidth: '200px', width: '100%', backgroundColor: 'orange', height: '50px', '&:hover': { backgroundColor: '#bb7c09' },
+            }}
           >Send
           </FormButton>
         </Grid>

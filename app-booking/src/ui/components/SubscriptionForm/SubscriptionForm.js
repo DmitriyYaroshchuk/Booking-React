@@ -18,8 +18,9 @@ export default function SubscriptionForm(props) {
           maxWidth: '260px',
           width: '100%',
           backgroundColor: '#fff',
-          '&:nth-of-type(3)': {
-            background: '#09214c',
+          borderRadius: '4px',
+          '& .MuiFormHelperText-root.Mui-error': {
+            backgroundColor: '#00224f',
             margin: 0,
           },
         }}
