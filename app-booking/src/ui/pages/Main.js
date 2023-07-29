@@ -3,9 +3,7 @@ import DestinationForm from '../components/DestinationForm/DestinationForm';
 
 export default function Main() {
   return (
-    <Box
-      component="div"
-    >
+    <Box component="div">
       <DestinationForm />
     </Box>
   );

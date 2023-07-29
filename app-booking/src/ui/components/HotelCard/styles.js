@@ -61,7 +61,7 @@ export const CustomButton = styled(Button)({
   backgroundColor: '#fff',
   color: '#4286de',
   margin: '0 auto',
-  transition: '0.3s color ease-in-out',
+  transition: '0.4s all ease-in-out',
   '&:hover': {
     color: '#fff',
   },

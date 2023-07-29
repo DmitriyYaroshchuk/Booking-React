@@ -4,12 +4,13 @@ import { DatePicker as DatePickerMUI } from '@mui/x-date-pickers/DatePicker';
 
 export default function DatePicker(props) {
   const {
-    label, disabled, input, meta,
+    label, disabled, input, meta, className,
   } = props;
   // const error = meta.touched && meta.error;
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DatePickerMUI
+        className={className}
         label={label}
         disabled={disabled}
         value={input.value || null}

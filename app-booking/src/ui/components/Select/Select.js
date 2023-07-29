@@ -6,12 +6,13 @@ import SelectMUI from '@mui/material/Select';
 
 export default function Select(props) {
   const {
-    input, label, options, disabled,
+    input, label, options, disabled, className,
   } = props;
   return (
     <FormControl fullWidth>
       <InputLabel id={`${input.name}-label`}>{label}</InputLabel>
       <SelectMUI
+        className={className}
         disabled={disabled}
         labelId={`${input.name}-label`}
         id={input.name}

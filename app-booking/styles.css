@@ -1,5 +1,6 @@
 * {
     transition: 0.3s color ease-in-out;
-    background-color: transparent;
+    background-color: unset;
     transform: translateX(-50%);
 }
+body:disabled

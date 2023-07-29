@@ -5,9 +5,6 @@ import { Text, Title, Wrapper } from './styles';
 
 export default function Newsletter(props) {
   const { handlerShowPopup } = props;
-  // const onSubmit = (value) => {
-  //   console.log(value);
-  // };
   return (
     <Wrapper>
       <Container sx={{ textAlign: 'center' }}>

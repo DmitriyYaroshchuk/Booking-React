@@ -1,13 +1,13 @@
 import { Grid } from '@mui/material';
-import { Field } from 'react-final-form';
 import { useSelector } from 'react-redux';
-import { FormButton, Wrapper } from './styles';
+import {
+  CustomGridContainer, FormButton, FormField, Wrapper,
+} from './styles';
 import TextField from '../TextField/TextField';
 import Select from '../Select/Select';
 import { selectors } from '../../../engine/core/destinations/sliceDestinations';
 import { composeValidators, validation } from './validation';
 import DatePicker from '../DatePicker/DatePicker';
-import { CustomGridContainer } from '../Logo/styles';
 
 export default function Login(props) {
   const { handleSubmit } = props;
@@ -20,9 +20,9 @@ export default function Login(props) {
       component="form"
       onSubmit={handleSubmit}
     >
-      <CustomGridContainer container sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
+      <CustomGridContainer container>
         <Grid item xs={2}>
-          <Field
+          <FormField
             name="destination"
             label="Destination"
             component={Select}
@@ -32,7 +32,7 @@ export default function Login(props) {
           />
         </Grid>
         <Grid item xs={2.5}>
-          <Field
+          <FormField
             name="check-in"
             label="Check in"
             component={DatePicker}
@@ -41,7 +41,7 @@ export default function Login(props) {
           />
         </Grid>
         <Grid item xs={2.5}>
-          <Field
+          <FormField
             name="check-out"
             label="Check out"
             component={DatePicker}
@@ -50,7 +50,7 @@ export default function Login(props) {
           />
         </Grid>
         <Grid item xs={1}>
-          <Field
+          <FormField
             name="adults"
             label="Adults"
             component={TextField}
@@ -59,7 +59,7 @@ export default function Login(props) {
           />
         </Grid>
         <Grid item xs={1}>
-          <Field
+          <FormField
             name="children"
             label="Children"
             component={TextField}
@@ -71,9 +71,6 @@ export default function Login(props) {
           <FormButton
             type="submit"
             loading={pending}
-            sx={{
-              maxWidth: '200px', width: '100%', backgroundColor: 'orange', height: '50px', '&:hover': { backgroundColor: '#bb7c09' },
-            }}
           >Send
           </FormButton>
         </Grid>

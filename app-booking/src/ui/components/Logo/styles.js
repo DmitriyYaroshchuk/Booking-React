@@ -1,7 +1,6 @@
 import { styled } from '@mui/system';
 import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
-import { Grid } from '@mui/material';
 
 export const Wrapper = styled(Link)(({ theme }) => ({
   display: 'flex',
@@ -19,8 +18,4 @@ export const Icon = styled(Box)({
 });
 export const Text = styled(Box)({
   margin: 0,
-});
-export const CustomGridContainer = styled(Grid)({
-  justifyContent: 'space-between',
-  alignItems: 'center',
 });

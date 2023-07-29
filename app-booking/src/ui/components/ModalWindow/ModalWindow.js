@@ -2,7 +2,7 @@ import {
   CardMedia,
   DialogActions,
 } from '@mui/material';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Newsletter from '../Newsletter/Newsletter';
 import Button from '../Button/Button';
 import close from '../../../images/close.svg';
@@ -14,14 +14,13 @@ import { selectors, setPopup } from '../../../engine/core/destinations/sliceDest
 
 export default function ModalWindow() {
   const dispatch = useDispatch();
-  const open = selectors.popup;
+  const open = useSelector(selectors.popup);
   const handlerShowPopup = () => {
-    dispatch(setPopup(!open));
+    dispatch(setPopup(true));
   };
   const handlerClosePopup = () => {
-    dispatch(setPopup(!open));
+    dispatch(setPopup(false));
   };
-
   return (
     <>
       <Newsletter handlerShowPopup={handlerShowPopup} />
@@ -30,7 +29,7 @@ export default function ModalWindow() {
           <Header>
             <Title>Booking</Title>
             <DialogActions>
-              <Button sx={{ backgroundColor: 'transparent' }} onClick={handlerClosePopup}>
+              <Button sx={{ backgroundColor: 'transparent', width: '65px' }} onClick={handlerClosePopup}>
                 <CardMedia
                   component="img"
                   alt="close"
@@ -47,6 +46,7 @@ export default function ModalWindow() {
               alt="checkMark"
               image={checkMark}
               title="checkMark"
+              sx={{ width: '100px', margin: '0 auto' }}
             />
           </Content>
         </Container>
