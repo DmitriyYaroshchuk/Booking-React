@@ -9,13 +9,13 @@ import {
 import close from '../../../images/close.svg';
 import Button from '../Button/Button';
 import ModalWindowBookForm from './ModalWindowBookForm/ModalWindowBookForm';
-import { selectors, setPopup } from '../../../engine/core/hotels/sliceHotels';
+import { hotelsSelectors, setPopup } from '../../../engine/core/hotels/sliceHotels';
 
 export default function ModalWindowBook() {
   const saveDataToLocalStorage = (data) => {
     localStorage.setItem('bookingData', JSON.stringify(data));
   };
-  const open = useSelector(selectors.popup);
+  const open = useSelector(hotelsSelectors.popup);
   const dispatch = useDispatch();
   const handleClose = () => {
     dispatch(setPopup(false));

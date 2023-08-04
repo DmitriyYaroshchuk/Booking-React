@@ -1,5 +1,5 @@
 import Button from '../Button/Button';
-import { links } from '../../../engine/config/routers';
+import { links } from '../../../engine/config/links';
 import { InnerContainer, StackWrapper, Wrapper } from './styles';
 import Logo from '../Logo/Logo';
 

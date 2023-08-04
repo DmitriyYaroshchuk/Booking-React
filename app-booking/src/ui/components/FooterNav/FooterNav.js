@@ -2,7 +2,7 @@ import Box from '@mui/material/Box';
 import {
   Container, Grid,
 } from '@mui/material';
-import { links } from '../../../engine/config/routers';
+import { links } from '../../../engine/config/links';
 import {
   CustomLink, ListItemCustom, WrapperGrid, WrapperList,
 } from './styles';

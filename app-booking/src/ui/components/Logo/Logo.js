@@ -1,5 +1,5 @@
 import { Icon, Text, Wrapper } from './styles';
-import { links } from '../../../engine/config/routers';
+import { links } from '../../../engine/config/links';
 import logotype from '../../../images/logo.svg';
 
 export default function Logo() {

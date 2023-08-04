@@ -21,7 +21,7 @@ const sliceDestinations = createSlice({
 });
 export const { setItems, setLoading, setPopup } = sliceDestinations.actions;
 export const destinationsReducer = sliceDestinations.reducer;
-export const selectors = Object.freeze({
+export const destinationsSelectors = Object.freeze({
   items: (state) => state.destinations.items,
   loading: (state) => state.destinations.loading,
   popup: (state) => state.destinations.popup,

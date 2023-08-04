@@ -10,11 +10,11 @@ import checkMark from '../../../images/checkMark.svg';
 import {
   Container, Content, Header, Text, Title, Wrapper,
 } from './styles';
-import { selectors, setPopup } from '../../../engine/core/destinations/sliceDestinations';
+import { destinationsSelectors, setPopup } from '../../../engine/core/destinations/sliceDestinations';
 
 export default function ModalWindow() {
   const dispatch = useDispatch();
-  const open = useSelector(selectors.popup);
+  const open = useSelector(destinationsSelectors.popup);
   const handlerShowPopup = () => {
     dispatch(setPopup(true));
   };

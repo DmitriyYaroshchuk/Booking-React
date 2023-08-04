@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { push } from 'redux-first-history';
 import HotelCard from '../../components/HotelCard/HotelCard';
-import { selectors } from '../../../engine/core/hotels/sliceHotels';
-import { links } from '../../../engine/config/routers';
+import { hotelsSelectors } from '../../../engine/core/hotels/sliceHotels';
+import { links } from '../../../engine/config/links';
 import {
   GridContainer, GridWrapper, Title, Wrapper,
 } from './styles';
@@ -13,7 +13,7 @@ import ModalWindowBook from '../../components/ModalWindowBook/ModalWindowBook';
 
 export default function Hotels() {
   const dispatch = useDispatch();
-  const items = useSelector(selectors.items);
+  const items = useSelector(hotelsSelectors.items);
   useEffect(() => {
     if (items.length === 0) {
       dispatch(push(links.main));

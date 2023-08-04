@@ -1,6 +1,6 @@
 import { Container } from '@mui/material';
 import { Form } from 'react-final-form';
-import SubscriptionForm from '../SubscriptionForm/SubscriptionForm';
+import SubscriptionForm from './SubscriptionForm/SubscriptionForm';
 import { Text, Title, Wrapper } from './styles';
 
 export default function Newsletter(props) {

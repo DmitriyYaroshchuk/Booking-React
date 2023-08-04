@@ -1,12 +1,16 @@
 import { Field } from 'react-final-form';
-import { Stack, TextareaAutosize } from '@mui/material';
+import {
+  FormControlLabel, RadioGroup, Stack, TextareaAutosize,
+} from '@mui/material';
 import { useDispatch } from 'react-redux';
+import Radio from '@mui/material/Radio';
+import Checkbox from '@mui/material/Checkbox';
+import Box from '@mui/material/Box';
 import TextField from '../../TextField/TextField';
 import { composeValidators, validation } from './validation';
 import Button from '../../Button/Button';
 import {
-  ContainerField,
-  CustomField, Text, Title, Wrapper,
+  CustomField, Title, Wrapper,
 } from './styles';
 import { TextArea } from '../styles';
 import { setPopup } from '../../../../engine/core/hotels/sliceHotels';
@@ -57,110 +61,80 @@ export default function ModalWindowBookForm(props) {
         validate={composeValidators(validation.required, validation.validatePhone)}
       />
       <Title component="h3">Hotel room</Title>
-      <ContainerField>
+      <RadioGroup
+        aria-labelledby="demo-controlled-radio-buttons-group"
+        name="room"
+      >
         <Field
           name="room"
-          label="Room"
-          value="Single Room"
-          component={TextField}
-          type="radio"
+          value="single"
+          label="Single"
+          component={FormControlLabel}
+          control={<Radio />}
           validate={validation.required}
         />
-        <Text>Single Room</Text>
-      </ContainerField>
-      <ContainerField>
         <Field
           name="room"
-          label="Room"
-          value="Double Room"
-          component={TextField}
-          type="radio"
+          value="double"
+          label="Double"
+          component={FormControlLabel}
+          control={<Radio />}
           validate={validation.required}
         />
-        <Text>Double Room</Text>
-      </ContainerField>
-      <ContainerField>
         <Field
           name="room"
-          label="Room"
-          value="Luxury Room"
-          component={TextField}
-          type="radio"
+          value="luxury"
+          label="Luxury"
+          component={FormControlLabel}
+          control={<Radio />}
           validate={validation.required}
         />
-        <Text>Luxury Room</Text>
-      </ContainerField>
+      </RadioGroup>
       <Title component="h3">Additional services</Title>
-      <ContainerField>
+      <Box>
         <Field
           name="additional-services"
-          label="Service"
-          value="breakfast"
-          component={TextField}
-          type="checkbox"
+          label="Breakfast"
+          component={FormControlLabel}
+          control={<Checkbox />}
         />
-        <Text>Breakfast</Text>
-      </ContainerField>
-      <ContainerField>
         <Field
           name="additional-services"
-          label="Service"
-          value="lunch"
-          component={TextField}
-          type="checkbox"
+          label="Lunch"
+          component={FormControlLabel}
+          control={<Checkbox />}
         />
-        <Text>Lunch</Text>
-      </ContainerField>
-      <ContainerField>
         <Field
           name="additional-services"
-          label="Service"
-          value="dinner"
-          component={TextField}
-          type="checkbox"
+          label="Dinner"
+          component={FormControlLabel}
+          control={<Checkbox />}
         />
-        <Text>Dinner</Text>
-      </ContainerField>
-      <ContainerField>
         <Field
           name="additional-services"
-          label="Service"
-          value="supper"
-          component={TextField}
-          type="checkbox"
+          label="Supper"
+          component={FormControlLabel}
+          control={<Checkbox />}
         />
-        <Text>Supper</Text>
-      </ContainerField>
-      <ContainerField>
         <Field
           name="additional-services"
-          label="Service"
-          value="pool"
-          component={TextField}
-          type="checkbox"
+          label="Pool"
+          component={FormControlLabel}
+          control={<Checkbox />}
         />
-        <Text>Pool</Text>
-      </ContainerField>
-      <ContainerField>
         <Field
           name="additional-services"
-          label="Service"
-          value="SPA"
-          component={TextField}
-          type="checkbox"
+          label="SPA"
+          component={FormControlLabel}
+          control={<Checkbox />}
         />
-        <Text>SPA</Text>
-      </ContainerField>
-      <ContainerField>
         <Field
           name="additional-services"
-          label="Service"
-          value="excursions"
-          component={TextField}
-          type="checkbox"
+          label="Excursions"
+          component={FormControlLabel}
+          control={<Checkbox />}
         />
-        <Text>Excursions</Text>
-      </ContainerField>
+      </Box>
       <Title component="h3">Notes</Title>
       <TextArea
         name="notes"

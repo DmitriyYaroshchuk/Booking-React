@@ -1,5 +1,5 @@
 import { Container } from '@mui/material';
-import { links } from '../../../engine/config/routers';
+import { links } from '../../../engine/config/links';
 import {
   BoxTop, CustomButton, CustomLink, ListItemContainer, ListWrapper, Wrapper,
 } from './styles';

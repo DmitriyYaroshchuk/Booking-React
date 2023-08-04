@@ -56,7 +56,7 @@ export const CustomGridContainer = styled(Grid)({
   alignItems: 'center',
 });
 export const FormField = styled(Field)(({ theme }) => ({
-  backgroundColor: 'rgba(33,150,243,0.3)',
+  backgroundColor: 'rgba(255,255,255,0.5)',
   borderRadius: '4px',
   '& .MuiFormHelperText-root.Mui-error': {
     fontFamily: theme.typography.fontFamily,
@@ -73,6 +73,6 @@ export const FormField = styled(Field)(({ theme }) => ({
     fontWeight: 700,
     fontSize: '20px',
     lineHeight: '110%',
-    color: 'white',
+    color: '#fff',
   },
 }));

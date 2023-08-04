@@ -25,7 +25,7 @@ export const {
   setPopup,
 } = sliceHotels.actions;
 export const hotelsReducer = sliceHotels.reducer;
-export const selectors = Object.freeze({
+export const hotelsSelectors = Object.freeze({
   items: (state) => state.hotels.items,
   loading: (state) => state.hotels.loading,
   popup: (state) => state.hotels.popup,

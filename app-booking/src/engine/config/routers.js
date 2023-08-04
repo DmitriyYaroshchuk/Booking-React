@@ -1,12 +1,8 @@
 import Main from '../../ui/pages/Main';
 import About from '../../ui/pages/About';
 import Hotels from '../../ui/pages/Hotels/Hotels';
+import { links } from './links';
 
-export const links = {
-  main: '/',
-  about: '/about',
-  hotels: '/hotels',
-};
 export const pages = [
   {
     link: links.main,

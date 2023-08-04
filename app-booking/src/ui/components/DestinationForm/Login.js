@@ -5,15 +5,16 @@ import {
 } from './styles';
 import TextField from '../TextField/TextField';
 import Select from '../Select/Select';
-import { selectors } from '../../../engine/core/destinations/sliceDestinations';
 import { composeValidators, validation } from './validation';
 import DatePicker from '../DatePicker/DatePicker';
+import { destinationsSelectors } from '../../../engine/core/destinations/sliceDestinations';
+import { hotelsSelectors } from '../../../engine/core/hotels/sliceHotels';
 
 export default function Login(props) {
   const { handleSubmit } = props;
-  const destinationItems = useSelector(selectors.items);
-  const destinationsLoading = useSelector(selectors.loading);
-  const hotelsLoading = useSelector(selectors.loading);
+  const destinationItems = useSelector(destinationsSelectors.items);
+  const destinationsLoading = useSelector(destinationsSelectors.loading);
+  const hotelsLoading = useSelector(hotelsSelectors.loading);
   const pending = destinationsLoading || hotelsLoading;
   return (
     <Wrapper
@@ -71,6 +72,9 @@ export default function Login(props) {
           <FormButton
             type="submit"
             loading={pending}
+            sx={{
+              backgroundColor: pending ? '#02a902' : '#00bcd4',
+            }}
           >Send
           </FormButton>
         </Grid>

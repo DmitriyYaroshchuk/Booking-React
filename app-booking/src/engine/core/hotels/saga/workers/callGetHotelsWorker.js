@@ -1,8 +1,8 @@
 import { delay, put, call } from 'redux-saga/effects';
 import { push } from 'redux-first-history';
-import { links } from '../../../../config/routers';
 import { setItems, setLoading } from '../../sliceHotels';
 import { api } from '../../../../config/axios';
+import { links } from '../../../../config/links';
 
 export function* callGetHotelsWorker() {
   try {

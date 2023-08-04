@@ -1,6 +1,6 @@
 import { Field } from 'react-final-form';
-import TextField from '../TextField/TextField';
-import Button from '../Button/Button';
+import TextField from '../../TextField/TextField';
+import Button from '../../Button/Button';
 import { composeValidators, validation } from './validation';
 import { Wrapper } from './styles';
 
@@ -12,6 +12,7 @@ export default function SubscriptionForm(props) {
       onSubmit={(event) => {
         handleSubmit(event);
         form.reset();
+        form.resetFieldState('email');
       }}
       sx={{ alignItems: 'baseline' }}
     >
