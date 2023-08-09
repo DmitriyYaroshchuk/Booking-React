@@ -50,6 +50,9 @@ export const FormButton = styled(Button)({
   '&:hover': {
     backgroundColor: '#01899BFF',
   },
+  '& .MuiLoadingButton-loading': {
+    backgroundColor: '#0000bb',
+  },
 });
 export const CustomGridContainer = styled(Grid)({
   justifyContent: 'space-between',

@@ -27,7 +27,7 @@ export default function HotelCard(props) {
       <CardContent>
         <Name gutterBottom variant="h5" component="div">{name}</Name>
         <Text variant="body2" color="text.secondary">{address}, {city}, {countryCode}</Text>
-        <PhoneNumber component="a" href={phoneNumber || undefined}>{phoneNumber || 'Номера нет'}</PhoneNumber>
+        <PhoneNumber component="a" href={phoneNumber || undefined}>{phoneNumber || 'No phone number'}</PhoneNumber>
         <HotelRating>{hotelRating || '-'}</HotelRating>
       </CardContent>
       <CardActions>

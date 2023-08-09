@@ -65,29 +65,41 @@ export default function ModalWindowBookForm(props) {
         aria-labelledby="demo-controlled-radio-buttons-group"
         name="room"
       >
-        <Field
-          name="room"
-          value="single"
+        <FormControlLabel
           label="Single"
-          component={FormControlLabel}
-          control={<Radio />}
-          validate={validation.required}
+          control={(
+            <Field
+              name="room"
+              value="single"
+              component={Radio}
+              validate={validation.required}
+              type="radio"
+            />
+            )}
         />
-        <Field
-          name="room"
-          value="double"
+        <FormControlLabel
           label="Double"
-          component={FormControlLabel}
-          control={<Radio />}
-          validate={validation.required}
+          control={(
+            <Field
+              name="room"
+              value="double"
+              component={Radio}
+              validate={validation.required}
+              type="radio"
+            />
+              )}
         />
-        <Field
-          name="room"
-          value="luxury"
+        <FormControlLabel
           label="Luxury"
-          component={FormControlLabel}
-          control={<Radio />}
-          validate={validation.required}
+          control={(
+            <Field
+              name="room"
+              value="luxury"
+              component={Radio}
+              validate={validation.required}
+              type="radio"
+            />
+              )}
         />
       </RadioGroup>
       <Title component="h3">Additional services</Title>

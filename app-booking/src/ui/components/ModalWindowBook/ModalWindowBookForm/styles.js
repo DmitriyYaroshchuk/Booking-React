@@ -39,17 +39,3 @@ export const Title = styled(Typography)(({ theme }) => ({
   lineHeight: '130%',
   marginBottom: '15px',
 }));
-export const ContainerField = styled(Box)({
-  display: 'flex',
-  alignItems: 'center',
-  width: '100%',
-  marginBottom: '25px',
-});
-export const Text = styled(Typography)(({ theme }) => ({
-  fontFamily: theme.typography.fontFamily,
-  fontStyle: 'normal',
-  fontWeight: 400,
-  fontSize: '15px',
-  lineHeight: '110%',
-  marginLeft: '15px',
-}));
